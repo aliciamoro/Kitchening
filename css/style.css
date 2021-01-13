@@ -1,0 +1,237 @@
+:root{
+    --colorBotones:  rgb(80, 80, 80);
+}
+
+*{
+    box-sizing: border-box;
+    margin:0 auto;
+    padding: 0;
+}
+body{
+    background-image:url ('.../img/images/bg-body.png');
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+}
+a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+ul{
+    list-style: none;
+
+}
+.container{
+    width: 100%;
+    padding: 10px;
+ /*header*/   
+}
+header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+header .logo{
+    width: 180px;
+    margin: 15px 0 30px 0;
+    border-radius: 90px;
+    /*con el 180 de width y 90 px radius queda redondo*/
+
+}
+header .toggle-nav{
+    display: block;
+    margin-bottom: 30px;
+   
+}
+header.toggle-nav span{
+    background-color: var(--colorBotones);
+    padding: 5px;
+}
+  
+header nav.main-nav li{
+    background-color: var(--colorBotones);
+    border-color:1px solid white;
+    padding: 5px;
+}
+
+/*Banner*/
+
+section.banner img{
+    display: none;
+}
+/*esto es lo que futuramente va a flotar*/
+.container section.vip-products article{
+    margin-bottom: 30px;
+
+}
+.container section.vip-products article .photo-container{
+    position: relative;
+}
+.container section.vip-products article .photo{
+    width: 100%;
+}
+.container section.vip-products article .special{
+    position: absolute;
+    top:0px;
+    right: 10px;
+}
+.container section.vip-products article .zoom{
+    background-color: rgba(0, 0, 0 ,0.5);
+    width:100% ;
+    position: absolute;
+    text-align: center;
+    display: block;
+    top: 45%;
+    padding: 5px;
+
+}
+.container section.vip-products article.product h2{
+    margin-top: 15px 0;
+
+}
+.container section.vip-products article.product p{
+    margin-bottom: 15px;
+
+
+}
+.container section.vip-products article.product a.more{
+    background-color: var(--colorBotones);
+    padding: 5px;
+    text-transform: lowercase;
+}
+/*  FOOTER  */
+
+.container footer li{
+    background-color: firebrick;
+    text-align: center;
+    border: 1px solid white;
+    padding: 10px;
+}
+
+/* MEDIA QUERIES */
+
+/* VERSIÓN TABLET */
+
+@media(min-width:426px){
+
+    header{
+        margin-bottom: 20px;
+    }
+
+    .container header .toggle-nav{
+        display: none;
+    }
+
+    header nav.main-nav li{
+        display: inline-block;
+        width: 118px; 
+    }
+
+    header nav.main-nav li:not(:last-child){
+        margin-right: 3px;
+    }
+
+    /* BANNER */
+
+    section.banner img{
+        display:block;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+
+    .container section.vip-products{
+        overflow: hidden;
+    }
+    .container section.vip-products article{
+        float: left;
+        width: 48%;
+    }
+    .container section.vip-products article:nth-child(odd){
+        margin-right: 4%;
+    }
+
+}
+/* VERSIÓN ESCRITORIO */
+
+@media(min-width:769px){
+    /*generales*/
+    .container{
+        max-width: 1180px;
+        padding-bottom: 0px;
+    }
+    /*header*/
+    header nav.main-nav ul{
+        overflow: hidden;
+        width: 100%;
+    }
+    header nav.main-nav li{
+        width: 180px;
+        float: left;
+     
+    }
+    header nav.main-nav li:not(:last-child){
+        margin-right: 16px;
+    }
+     /*art*/
+    .container section.vip-products article{
+        width: 380px;
+        float:left;
+        margin-bottom: 30px;
+        margin-right: 10px;
+    }
+   
+    .container section.vip-products article:nth-child(odd){
+        margin-right: 0%;
+    }
+    .container section.vip-products article:nth-child(even){
+        margin-right: 0px;
+    }
+
+    .container section.vip-products article:nth-child(3n){
+        margin-right: 0;
+    }
+    .container section.vip-products article:nth-child(2){
+        margin: 0 9px;
+    }
+    .container section.vip-products article:nth-child(5){
+        margin: 0 9px;
+    }
+
+    .container section.vip-products article.product a.more{
+        padding:10px;
+    }
+
+    /* FOOTER */
+
+    .container footer{
+        background-color: firebrick;
+        height: 150px;
+        padding: 65px 0 65px 320px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+    }
+
+    .container footer li{
+        display: inline;
+        border: none;
+        border-right: 1px solid white;
+        padding: 5px 10px;
+    }
+
+    .container footer li:last-child{
+        border-right: none;
+    }
+
+    .container footer li a{
+        text-transform: capitalize;
+    }
+    
+}
+
+
+
+
+
+
